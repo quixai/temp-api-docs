@@ -28,7 +28,10 @@ jobs:
         uses: actions/upload-pages-artifact@v1
         with:
           # Upload entire repository
+          name: develop
           path: '.'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1
+        with:
+            artifact_name: develop
